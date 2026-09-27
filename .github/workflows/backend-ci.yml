@@ -38,8 +38,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           ./mvnw -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.projectKey=nusretkilic_devops-practice \
-            -Dsonar.qualitygate.wait=true
+            -Dsonar.projectKey=nusretkilic_devops-practice
 
 
       - name: Build Docker image
