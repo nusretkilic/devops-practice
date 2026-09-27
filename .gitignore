@@ -34,3 +34,12 @@ build/
 
 ### MacOS ###
 .DS_Store
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+
+# env
+.env
