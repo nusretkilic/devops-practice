@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minicommerce-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minicommerce-backend
+  template:
+    metadata:
+      labels:
+        app: minicommerce-backend
+    spec:
+      containers:
+        - name: minicommerce-backend
+          image: ghcr.io/nusretkilic/minicommerce-backend:747b36f9bbbdaa5f6f10e367b700e00ae29c79e2
+          ports:
+            - containerPort: 8080
